@@ -1,0 +1,4 @@
+node_modules/
+zgyaan
+*.env
+dist/
