@@ -1,6 +1,10 @@
-import express from "express";
+import express, { Express } from "express";
+
 import serverConfig from "./config/server.config";
-const app = express();
+import apiRouter from "./routes";
+
+const app: Express = express();
+app.use("/api", apiRouter);
 app.listen(serverConfig.PORT, () => {
   console.log(`Server started at port at *:${serverConfig.PORT}`);
   console.log("wow");
